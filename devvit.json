@@ -1,6 +1,9 @@
 {
   "$schema": "https://developers.reddit.com/schema/config-file.v1.json",
-  "name": "<% name %>",
+  "name": "snoo-rush",
+  "permissions": {
+    "redis": true
+  },
   "post": {
     "dir": "dist/client",
     "entrypoints": {
@@ -9,7 +12,7 @@
       }
     }
   },
-  "media" : {
+  "media": {
     "dir": "assets"
   },
   "server": {
@@ -19,8 +22,8 @@
   "menu": {
     "items": [
       {
-        "label": "Create a new post",
-        "description": "<% name %>",
+        "label": "Create Snoo Rush Game",
+        "description": "Speedrun platformer - compete for your subreddit!",
         "location": "subreddit",
         "forUserType": "moderator",
         "endpoint": "/internal/menu/post-create"
@@ -29,5 +32,8 @@
   },
   "triggers": {
     "onAppInstall": "/internal/on-app-install"
+  },
+  "dev": {
+    "subreddit": "snoo_rush_dev"
   }
 }

@@ -9,12 +9,12 @@ export const createPost = async () => {
   return await reddit.submitCustomPost({
     splash: {
       // Splash screen customization
-      appDisplayName: '<% name %>',
+      appDisplayName: 'Snoo Rush',
       backgroundUri: 'default-splash.png',
-      buttonLabel: 'Start Playing',
-      description: 'An exciting interactive experience',
+      buttonLabel: '🏃 START SPEEDRUN',
+      description: 'Compete for your subreddit in this fast-paced platformer!',
       entryUri: 'index.html',
-      heading: 'Welcome to the Game!',
+      heading: '⚡ SNOO RUSH - Speedrun Championship',
       appIconUri: 'default-icon.png',
     },
     postData: {
@@ -22,6 +22,6 @@ export const createPost = async () => {
       score: 0,
     },
     subredditName: subredditName,
-    title: '<% name %>',
+    title: 'Snoo Rush - Speedrun Championship',
   });
 };
